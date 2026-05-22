@@ -1,5 +1,5 @@
 import React from 'react';
-import { MenuCategory } from '../types';
+import type { MenuCategory } from '../types';
 import './Menu.css';
 
 const Menu: React.FC = () => {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Dish } from '../types';
+import type { Dish } from '../types';
 import './FeaturedDishes.css';
 
 const FeaturedDishes: React.FC = () => {

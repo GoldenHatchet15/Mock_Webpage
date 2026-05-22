@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FormData, FormErrors } from '../types';
+import type { FormData, FormErrors } from '../types';
 import './Reservations.css';
 
 const Reservations: React.FC = () => {
