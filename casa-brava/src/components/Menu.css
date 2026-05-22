@@ -1,0 +1,125 @@
+.menu {
+  background-color: rgba(212, 165, 116, 0.05);
+}
+
+.app.dark-mode .menu {
+  background-color: rgba(212, 165, 116, 0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.menu-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+}
+
+.menu-category {
+  background: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+}
+
+.app.dark-mode .menu-category {
+  background: #2d2d2d;
+}
+
+.menu-category h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--primary-dark);
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.menu-category h3:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 2px;
+  background-color: var(--gold);
+}
+
+.app.dark-mode .menu-category h3 {
+  color: var(--secondary);
+}
+
+.menu-item {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.app.dark-mode .menu-item {
+  border-bottom: 1px solid #444;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.menu-item h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--primary-dark);
+}
+
+.app.dark-mode .menu-item h4 {
+  color: var(--secondary);
+}
+
+.menu-item-price {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--gold);
+  white-space: nowrap;
+}
+
+.menu-item-description {
+  color: var(--dark);
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.app.dark-mode .menu-item-description {
+  color: var(--light);
+}
+
+.menu-item-tags {
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 992px) {
+  .menu-categories {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-category {
+    padding: 1.5rem;
+  }
+
+  .menu-item-header {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .menu-item-price {
+    font-size: 1rem;
+  }
+}

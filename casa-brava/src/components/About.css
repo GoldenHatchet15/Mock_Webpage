@@ -1,0 +1,253 @@
+.about {
+  background-color: var(--white);
+}
+
+.app.dark-mode .about {
+  background-color: #1a1a1a;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  margin: 3rem 0;
+}
+
+.about-text h3 {
+  color: var(--primary-dark);
+  margin-bottom: 1rem;
+}
+
+.app.dark-mode .about-text h3 {
+  color: var(--secondary);
+}
+
+.about-text p {
+  margin-bottom: 1.5rem;
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+.app.dark-mode .about-text p {
+  color: var(--light);
+}
+
+.chef-highlight {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #eee;
+}
+
+.app.dark-mode .chef-highlight {
+  border-top: 1px solid #444;
+}
+
+.chef-info {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.chef-image {
+  flex-shrink: 0;
+}
+
+.image-placeholder {
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(45deg, var(--secondary), var(--gold));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-placeholder:before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transform: rotate(45deg);
+  animation: shine 3s infinite;
+}
+
+.chef-initial {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--dark);
+  text-align: center;
+  z-index: 2;
+}
+
+.chef-details h4 {
+  margin: 0 0 0.5rem 0;
+  color: var(--primary-dark);
+}
+
+.app.dark-mode .chef-details h4 {
+  color: var(--secondary);
+}
+
+.chef-title {
+  font-weight: 600;
+  color: var(--gold);
+  margin: 0 0 1rem 0;
+}
+
+.chef-details p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.about-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-image .image-placeholder {
+  width: 100%;
+  height: 300px;
+  border-radius: var(--border-radius);
+}
+
+.image-content {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--dark);
+  text-align: center;
+  z-index: 2;
+}
+
+.hours-section {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #eee;
+}
+
+.app.dark-mode .hours-section {
+  border-top: 1px solid #444;
+}
+
+.hours-section h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--primary-dark);
+}
+
+.app.dark-mode .hours-section h3 {
+  color: var(--secondary);
+}
+
+.hours-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.hours-item {
+  background: rgba(212, 165, 116, 0.1);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.app.dark-mode .hours-item {
+  background: rgba(212, 165, 116, 0.2);
+}
+
+.hours-item:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+.day {
+  display: block;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.app.dark-mode .day {
+  color: var(--secondary);
+}
+
+.time {
+  display: block;
+  color: var(--dark);
+  font-weight: 600;
+}
+
+.app.dark-mode .time {
+  color: var(--light);
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
+}
+
+@media (max-width: 992px) {
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+
+  .chef-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .chef-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hours-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .image-placeholder {
+    width: 120px;
+    height: 120px;
+  }
+
+  .chef-initial {
+    font-size: 1.5rem;
+  }
+
+  .about-image .image-placeholder {
+    height: 200px;
+  }
+
+  .image-content {
+    font-size: 1.2rem;
+  }
+}
